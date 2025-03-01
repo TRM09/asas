@@ -114,7 +114,7 @@
     <!-- Меню с вариантами -->
     <div class="menu" id="menu">
       <button class="menu-item">Мои поручения</button>
-      <button class="menu-item">База знаний</button>
+      <button class="menu-item" id="knowledgeBaseBtn">База знаний</button>
       <button class="menu-item" id="chatbotBtn">Чат-Бот</button>
     </div>
 
@@ -126,6 +126,7 @@
     const menuBtn = document.getElementById("menuBtn");
     const menu = document.getElementById("menu");
     const chatbotBtn = document.getElementById("chatbotBtn");
+    const knowledgeBaseBtn = document.getElementById("knowledgeBaseBtn");
 
     menuBtn.addEventListener("click", () => {
       menu.classList.toggle("active");
@@ -134,6 +135,11 @@
     // При нажатии на кнопку "Чат-Бот" переходим на внешний URL
     chatbotBtn.addEventListener("click", () => {
       window.location.href = "https://lively-blancmange-97a03b.netlify.app/"; // Перенаправление на внешний сайт
+    });
+
+    // При нажатии на кнопку "База знаний" переходим на внешний URL
+    knowledgeBaseBtn.addEventListener("click", () => {
+      window.location.href = "https://cosmic-custard-422b10.netlify.app/"; // Перенаправление на внешний сайт
     });
   </script>
 </body>
