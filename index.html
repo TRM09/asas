@@ -113,7 +113,7 @@
 
     <!-- Меню с вариантами -->
     <div class="menu" id="menu">
-      <button class="menu-item">Мои поручения</button>
+      <button class="menu-item" id="tasksBtn">Мои поручения</button>
       <button class="menu-item" id="knowledgeBaseBtn">База знаний</button>
       <button class="menu-item" id="chatbotBtn">Чат-Бот</button>
     </div>
@@ -125,11 +125,17 @@
   <script>
     const menuBtn = document.getElementById("menuBtn");
     const menu = document.getElementById("menu");
+    const tasksBtn = document.getElementById("tasksBtn");
     const chatbotBtn = document.getElementById("chatbotBtn");
     const knowledgeBaseBtn = document.getElementById("knowledgeBaseBtn");
 
     menuBtn.addEventListener("click", () => {
       menu.classList.toggle("active");
+    });
+
+    // При нажатии на кнопку "Мои поручения" переходим на внешний URL
+    tasksBtn.addEventListener("click", () => {
+      window.location.href = "https://moiporucheniya.netlify.app"; // Перенаправление на внешний сайт
     });
 
     // При нажатии на кнопку "Чат-Бот" переходим на внешний URL
